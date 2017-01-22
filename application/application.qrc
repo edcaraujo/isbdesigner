@@ -1,0 +1,37 @@
+<RCC>
+    <qresource prefix="/images">
+        <file alias="icon/about">images/icon-about.png</file>
+        <file alias="icon/audio">images/icon-audio.png</file>
+        <file alias="icon/author">images/icon-author.png</file>
+        <file alias="icon/close">images/icon-close.png</file>
+        <file alias="icon/copy">images/icon-copy.png</file>
+        <file alias="icon/cut">images/icon-cut.png</file>
+        <file alias="icon/delete">images/icon-delete.png</file>
+        <file alias="icon/export">images/icon-export.png</file>
+        <file alias="icon/image">images/icon-image.png</file>
+        <file alias="icon/import">images/icon-import.png</file>
+        <file alias="icon/live">images/icon-live.png</file>
+        <file alias="icon/narrative">images/icon-narrative.png</file>
+        <file alias="icon/new">images/icon-new.png</file>
+        <file alias="icon/open">images/icon-open.png</file>
+        <file alias="icon/paste">images/icon-paste.png</file>
+        <file alias="icon/preferences">images/icon-preferences.png</file>
+        <file alias="icon/quit">images/icon-quit.png</file>
+        <file alias="icon/redo">images/icon-redo.png</file>
+        <file alias="icon/report">images/icon-report.png</file>
+        <file alias="icon/save">images/icon-save.png</file>
+        <file alias="icon/saveas">images/icon-saveas.png</file>
+        <file alias="icon/sketch">images/icon-sketch.png</file>
+        <file alias="icon/summary">images/icon-summary.png</file>
+        <file alias="icon/text">images/icon-text.png</file>
+        <file alias="icon/undo">images/icon-undo.png</file>
+        <file alias="icon/variable">images/icon-variable.png</file>
+        <file alias="icon/video">images/icon-video.png</file>
+        <file alias="icon/welcome">images/icon-welcome.png</file>
+        <file alias="background/view">images/background-view.png</file>
+        <file alias="icon/snapshot">images/icon-snapshot.png</file>
+        <file alias="icon/help">images/icon-help.png</file>
+        <file alias="icon/properties">images/icon-properties.png</file>
+        <file alias="icon/insert">images/icon-insert.png</file>
+    </qresource>
+</RCC>
