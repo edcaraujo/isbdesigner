@@ -50,7 +50,7 @@ private:
   QMap<QString, QisbWindow*> _windows;
   QMap<QString, QisbEntity*> _entities;
 
-  QUndoStack commands;
+  QUndoStack _commands;
 };
 
 #endif // QISBEDITOR_H

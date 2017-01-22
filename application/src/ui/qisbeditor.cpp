@@ -32,23 +32,23 @@ void QisbEditor::clean()
 
 void QisbEditor::undo()
 {
-  if (commands.canUndo())
+  if (_commands.canUndo())
   {
-    QString code = commands.undoText();
+    QString code = _commands.undoText();
 
-    while(code == commands.undoText())
-      commands.undo();
+    while(code == _commands.undoText())
+      _commands.undo();
   }
 }
 
 void QisbEditor::redo()
 {
-  if (commands.canRedo())
+  if (_commands.canRedo())
   {
-    QString code = commands.redoText();
+    QString code = _commands.redoText();
 
-    while(code == commands.redoText())
-      commands.redo();
+    while(code == _commands.redoText())
+      _commands.redo();
   }
 }
 
@@ -110,7 +110,7 @@ void QisbEditor::insert(const QString &uid, const QString &parent, const QMap<QS
       connect(command, SIGNAL(changed(QString,QMap<QString,QString>,QMap<QString,QString>,QMap<QString,QString>)), SLOT(change(QString,QMap<QString,QString>,QMap<QString,QString>,QMap<QString,QString>)));
       connect(command, SIGNAL(selected(QString,QMap<QString,QString>)),SLOT(select(QString,QMap<QString,QString>)));
 
-      commands.push(command); return;
+      _commands.push(command); return;
     }
 
     QisbEntity* entity = new QisbEntity();
@@ -145,7 +145,7 @@ void QisbEditor::remove(const QString &uid, const QMap<QString,QString> &setting
       connect(command, SIGNAL(changed(QString,QMap<QString,QString>,QMap<QString,QString>,QMap<QString,QString>)), SLOT(change(QString,QMap<QString,QString>,QMap<QString,QString>,QMap<QString,QString>)));
       connect(command, SIGNAL(selected(QString,QMap<QString,QString>)),SLOT(select(QString,QMap<QString,QString>)));
 
-      commands.push(command); return;
+      _commands.push(command); return;
     }
 
     delete _entities[uid]; _entities.remove(uid);
@@ -176,7 +176,7 @@ void QisbEditor::change(const QString &uid, const QMap<QString,QString> &propert
       connect(command, SIGNAL(changed(QString,QMap<QString,QString>,QMap<QString,QString>,QMap<QString,QString>)), SLOT(change(QString,QMap<QString,QString>,QMap<QString,QString>,QMap<QString,QString>)));
       connect(command, SIGNAL(selected(QString,QMap<QString,QString>)),SLOT(select(QString,QMap<QString,QString>)));
 
-      commands.push(command); return;
+      _commands.push(command); return;
     }
 
     QisbEntity* entity = _entities[uid];
