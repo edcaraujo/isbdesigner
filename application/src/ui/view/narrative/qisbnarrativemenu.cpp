@@ -145,7 +145,7 @@ void QisbNarrativeMenu::createConnections()
   connect(_pasteAction,SIGNAL(triggered()),SIGNAL(performedPaste()));
   connect(_deleteAction,SIGNAL(triggered()),SIGNAL(performedDelete()));
   connect(_snapshotAction,SIGNAL(triggered()),SIGNAL(performedSnapshot()));
-  connect(_sequenceAction,SIGNAL(triggered()),SLOT(performSequence());
+  connect(_sequenceAction,SIGNAL(triggered()),SLOT(performSequence()));
   connect(_propertiesAction,SIGNAL(triggered()),SIGNAL(performedProperties()));
 }
 
