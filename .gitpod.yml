@@ -1,3 +1,5 @@
+ports:
+  - port: 8000
+    onOpen: open-browser
 tasks:
-  - command: 'echo "TODO: Replace with command to start project"'
   - command: php -S 0.0.0.0:8000
